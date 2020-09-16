@@ -1,0 +1,163 @@
+<template>
+    <lightning-card title='This action will define the routing rules for Omni Channel'>
+
+        <ul class="slds-accordion">
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section slds-is-open">
+                    <div class="slds-accordion__summary">
+                        <h3 class="slds-accordion__summary-heading">
+                            <button aria-controls="accordion-details-01" aria-expanded="true"
+                                class="slds-button slds-button_reset slds-accordion__summary-action">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content" title="Queue Based Routing">Queue Based</span>
+                            </button>
+                        </h3>
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button
+                                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                aria-haspopup="true" title="Show More">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown_actions slds-dropdown_right">
+                                <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                            <span class="slds-truncate" title="Queue">Queue Based</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Skills">Skills Based</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Agent">Direct to Agent</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">
+                                <abbr class="slds-required" title="required">* </abbr>Case Id</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text-input-id-1" placeholder="Placeholder Text" required="" class="slds-input" />
+                            </div>
+                        </div>                
+                    </section>
+            </li>
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section">
+                    <div class="slds-accordion__summary">
+                        <h3 class="slds-accordion__summary-heading">
+                            <button aria-controls="accordion-details-02" aria-expanded="false"
+                                class="slds-button slds-button_reset slds-accordion__summary-action">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content" title="Skills Based">Skills Based</span>
+                            </button>
+                        </h3>
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button
+                                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                aria-haspopup="true" title="Show More">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown_actions slds-dropdown_right">
+                                <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                            <span class="slds-truncate" title="Queue">Queue</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Skills">Skills</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Agent">Agent</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div hidden="" class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-2">
+                                <abbr class="slds-required" title="required">* </abbr>Skill List</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text-input-id-2" placeholder="Placeholder Text" required="" class="slds-input" />
+                            </div>
+                        </div>                
+                    </section>
+            </li>
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section">
+                    <div class="slds-accordion__summary">
+                        <h3 class="slds-accordion__summary-heading">
+                            <button aria-controls="accordion-details-03" aria-expanded="false"
+                                class="slds-button slds-button_reset slds-accordion__summary-action">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content" title="Direct to Agent">Direct to Agent</span>
+                            </button>
+                        </h3>
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button
+                                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                aria-haspopup="true" title="Show More">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown_actions slds-dropdown_right">
+                                <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                            <span class="slds-truncate" title="Queue">Queue</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Skills">Skills</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Agent">Agent</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div hidden="" class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-3">
+                                <abbr class="slds-required" title="required">* </abbr>Agent Name</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text-input-id-3" placeholder="Placeholder Text" required="" class="slds-input" />
+                            </div>
+                        </div>
+                </section>
+            </li>
+        </ul>
+    </lightning-card>
+</template>

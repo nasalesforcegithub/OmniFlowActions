@@ -1,0 +1,149 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                        </svg>
+                        <span class="slds-assistive-text">account</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                            <span>Omni Routing - Add Skill Requirement</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+
+
+
+        <div class="slds-card__body slds-card__body_inner">
+
+            <c-flow-combobox
+                label="Skill Requirements List"
+                builder-context={builderContext}
+                value={selectedChannelVariable}
+                disabled>
+            </c-flow-combobox>
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col" style="width:50%">
+                            <div class="slds-truncate" title="Skill Name">Skill Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Skill Level">Skill Level</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Additional Skill">Additional Skill</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Skill Priority">Skill Priority</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title=""></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <td data-label="Skill Name">
+                            <div>
+                                <c-custom-lookup child-object-api-name='ServiceResourceSkill'
+                                    target-field-api-name='SkillId' required onvalueselected={handleValueSelcted}>
+                                </c-custom-lookup>
+                                <!--The selected record Id is:- {selectedRecordId}-->
+                            </div>
+                        </td>
+                        <td data-label="Skill Level">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <select class="slds-select" disabled="" onchange={handleValueSelctedSkillLevel}
+                                            id="select-01">>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--The selected skill level is:- {selectedSkillLevel}-->
+                            </div>
+                        </td>
+                        <td data-label="Additional Skill">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-checkbox">
+                                        <input type="checkbox" name="options" id="checkbox-unique-id-73"
+                                            value="checkbox-unique-id-73" checked=""  onchange={handleValueSelctedAdditional}/>
+                                        <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                            <span class="slds-checkbox_faux"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!--Checkbox selected is:= {selectedAdditionalSkill}-->
+                            </div>
+                        </td>
+                        <td data-label="Skill Priority">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <select class="slds-select" disabled=""
+                                            onchange={handleValueSelctedSkillPriority} id="select-02">>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--The selected skill priority is:- {selectedSkillLevel}-->
+                            </div>
+                        </td>
+                        <td data-label="">
+                            <div class="slds-button-group" role="group" data-aura-rendered-by="105:4037;a"><button
+                                    class="slds-button slds-button_icon slds-button_icon-border" type="button"
+                                    title="Remove row" data-aura-rendered-by="91:4037;a">
+                                    <lightning-primitive-icon data-aura-rendered-by="92:4037;a"
+                                        lightning-primitiveicon_primitiveicon-host="">
+                                        <svg focusable="false" data-key="dash"
+                                            aria-hidden="true" class="slds-button__icon">
+                                            <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.36.1#dash">
+                                            </use>
+                                        </svg></lightning-primitive-icon>
+                                        <span class="slds-assistive-text"
+                                        data-aura-rendered-by="94:4037;a">Remove row</span>
+                                </button>
+                                <button class="slds-button slds-button_icon slds-button_icon-border"
+                                    type="button" title="Add row" data-aura-rendered-by="99:4037;a">
+                                    <lightning-primitive-icon data-aura-rendered-by="100:4037;a"
+                                        lightning-primitiveicon_primitiveicon-host="">
+                                        <svg focusable="false" data-key="add"
+                                            aria-hidden="true" class="slds-button__icon">
+                                            <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.36.1#add">
+                                            </use>
+                                        </svg></lightning-primitive-icon><span class="slds-assistive-text"
+                                        data-aura-rendered-by="102:4037;a">Add row</span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</template>

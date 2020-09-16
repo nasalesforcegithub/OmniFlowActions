@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/customLookup": [
+                "customLookup/customLookup.js"
+            ],
+            "c/exampleLWCEditor": [
+                "exampleLWCEditor/exampleLWCEditor.js"
+            ],
+            "c/omniRoutingInputs": [
+                "omniRoutingInputs/omniRoutingInputs.js"
+            ],
+            "c/omniSkillInputs": [
+                "omniSkillInputs/omniSkillInputs.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}
